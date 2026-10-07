@@ -921,3 +921,105 @@ kbd {
 .ev-legend .k.syn    { background: var(--moderate-weak); border-bottom: 2px dashed var(--moderate); }
 .ev-jump { background: none; border: 0; padding: 0; font: inherit;
            color: var(--accent); cursor: pointer; text-decoration: underline; }
+
+/* ==========================================================================
+   Responsive layer.
+
+   The desktop layout is a fixed two-column review shell: a 380px candidate
+   rail beside a flexible detail panel, both locked to the viewport height.
+   On a phone that leaves the detail panel about ten pixels wide, so below
+   820px the shell becomes one column that scrolls with the page, with the
+   rail capped and scrolling on its own above the detail.
+
+   Appended rather than edited: nothing above this line changes, so the
+   desktop rendering is byte-identical to what the report's figures show.
+   ========================================================================== */
+
+@media (max-width: 820px) {
+  /* --- review shell: two columns -> one, page scrolls normally --- */
+  .review {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: calc(100vh - var(--topbar-h));
+  }
+  .rail {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    max-height: 46vh;
+  }
+  .detail { overflow-y: visible; }
+  .detail-inner { padding: 20px 16px 48px; max-width: none; }
+
+  /* --- intake: side-by-side drop zones stack --- */
+  .intake-grid { grid-template-columns: 1fr; }
+
+  /* --- summary strip: 5 cells will not fit, so let it wrap --- */
+  .summary { flex-wrap: wrap; }
+  .summary-cell {
+    flex: 1 1 33%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* --- tab strip and section padding --- */
+  .segmented { flex-wrap: wrap; }
+
+  /* --- contribution bars and pool rows: narrower label columns --- */
+  .bar-row     { grid-template-columns: 104px 1fr 42px; }
+  .insight-row { grid-template-columns: 96px 1fr 54px; }
+
+  /* --- baseline vs hybrid: the explanation drops below the numbers --- */
+  .delta-explain { flex-wrap: wrap; }
+  .delta-explain .txt { flex: 1 1 100%; margin-top: 8px; }
+
+  /* --- compare table is genuinely wide; give it its own scroll rather
+         than letting it push the whole page sideways --- */
+  .cmp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cmp-table { min-width: 460px; }
+
+  /* --- the radar's legend sits under the chart at this width --- */
+  .radar { flex: 1 1 100%; max-width: 420px; margin: 0 auto; }
+  .radar-key { flex: 1 1 100%; max-width: none; }
+}
+
+@media (max-width: 480px) {
+  .compose { padding-left: 16px; padding-right: 16px; }
+  .compose-head h1 { font-size: 23px; }
+  .detail-head h1 { font-size: 20px; }
+  .summary-cell { flex: 1 1 50%; }
+  .bar-row     { grid-template-columns: 88px 1fr 40px; }
+  .insight-row { grid-template-columns: 84px 1fr 50px; }
+  .actionbar-inner { padding-left: 16px; padding-right: 16px; }
+  /* Long code listings scroll themselves instead of the page. */
+  pre, .code { overflow-x: auto; }
+}
+
+/* --- top bar ------------------------------------------------------------
+   At 390px the brand, the "Review" label and three buttons do not fit on one
+   row: "New screening" ran off the edge, and because it sits in a sticky bar
+   it could not be scrolled to -- a primary action was simply unreachable.
+   The bar now wraps onto a second row on small screens, and the brand's
+   secondary label is dropped to buy back space. */
+@media (max-width: 820px) {
+  .topbar {
+    height: auto;
+    min-height: var(--topbar-h);
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding: 9px 16px;
+  }
+  .topbar-actions { margin-left: auto; flex-wrap: wrap; justify-content: flex-end; }
+  .review { min-height: 100vh; }
+}
+
+@media (max-width: 820px) {
+  /* "Rank 1 of 12" is one phrase; it must not break after "of". */
+  .detail-head { flex-wrap: wrap; row-gap: 10px; }
+  .detail-head .t-caption { white-space: nowrap; }
+}
+
+@media (max-width: 480px) {
+  .brand-sub { display: none; }
+  .topbar-actions { width: 100%; margin-left: 0; justify-content: flex-start; }
+}

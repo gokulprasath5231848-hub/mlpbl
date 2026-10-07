@@ -695,8 +695,12 @@
 
     return picker +
       '<div class="section">' +
+        // Wrapper lets the table scroll on its own on a narrow screen
+        // instead of pushing the whole page sideways.
+        '<div class="cmp-wrap">' +
         '<table class="cmp-table"><thead><tr><th>Attribute</th>' + head + '</tr></thead>' +
         '<tbody>' + scoreRow + covRow + verdictRow + skillRows + '</tbody></table>' +
+        '</div>' +
       '</div>';
   }
 
