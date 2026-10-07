@@ -1,0 +1,16 @@
+# Render blueprint: one web service running the whole Flask app.
+#
+# workers MUST stay at 1. app.py keeps the most recent results in a module
+# level global (_last_results_df) so /download can re-serve them; with two
+# workers a download would hit a process that never ran the screening and
+# would return an empty file.
+services:
+  - type: web
+    name: resume-screening
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 120
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"

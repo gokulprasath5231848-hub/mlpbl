@@ -1,0 +1,6 @@
+Job Title: Frontend Developer
+
+We are hiring a Frontend Developer to join a growing engineering team.
+The successful candidate will have strong experience with JS, React, CSS and Git.
+Additional experience with NodeJS and REST APIs is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

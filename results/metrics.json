@@ -1,0 +1,207 @@
+{
+  "n_resumes": 10000,
+  "skill_detection": {
+    "precision": 0.9700605778191985,
+    "recall": 1.0,
+    "f1": 0.9848027910827273,
+    "tp": 58289,
+    "fp": 1799,
+    "fn": 0,
+    "decisions": 330000,
+    "worst_recall": [
+      {
+        "skill": "machine learning",
+        "recall": 1.0,
+        "support": 2334
+      },
+      {
+        "skill": "pytorch",
+        "recall": 1.0,
+        "support": 2056
+      },
+      {
+        "skill": "tensorflow",
+        "recall": 1.0,
+        "support": 1018
+      },
+      {
+        "skill": "cloud",
+        "recall": 1.0,
+        "support": 3225
+      },
+      {
+        "skill": "pandas",
+        "recall": 1.0,
+        "support": 2050
+      }
+    ]
+  },
+  "ranking": {
+    "baseline": {
+      "P@10": 1.0,
+      "R@10": 0.012725327617174377,
+      "NDCG@10": 1.0,
+      "P@25": 0.945,
+      "R@25": 0.029887519870222992,
+      "NDCG@25": 0.9605449363721217,
+      "P@50": 0.8725,
+      "R@50": 0.054798888197860954,
+      "NDCG@50": 0.9019088916297404,
+      "P@100": 0.84125,
+      "R@100": 0.10564878298563177,
+      "NDCG@100": 0.8668524309599324,
+      "MAP": 0.5931160135383888
+    },
+    "hybrid": {
+      "P@10": 0.975,
+      "R@10": 0.012427708569555329,
+      "NDCG@10": 0.9825477318057814,
+      "P@25": 0.96,
+      "R@25": 0.030443618477890358,
+      "NDCG@25": 0.9693025318397122,
+      "P@50": 0.9349999999999999,
+      "R@50": 0.05899665433411971,
+      "NDCG@50": 0.9475406760454184,
+      "P@100": 0.88125,
+      "R@100": 0.11059129890470623,
+      "NDCG@100": 0.9014982569263663,
+      "MAP": 0.6848149059270343
+    }
+  },
+  "by_phrasing": {
+    "baseline": {
+      "full": {
+        "P@10": 0.7875,
+        "NDCG@10": 0.769463364523723
+      },
+      "abbr": {
+        "P@10": 0.9875,
+        "NDCG@10": 0.992047401475131
+      },
+      "mixed": {
+        "P@10": 0.8875,
+        "NDCG@10": 0.9113050127893395
+      }
+    },
+    "hybrid": {
+      "full": {
+        "P@10": 0.95,
+        "NDCG@10": 0.9554254451754217
+      },
+      "abbr": {
+        "P@10": 1.0,
+        "NDCG@10": 1.0
+      },
+      "mixed": {
+        "P@10": 0.925,
+        "NDCG@10": 0.94463045112841
+      }
+    }
+  },
+  "per_job": [
+    {
+      "job_id": "backend_developer",
+      "relevant": 642,
+      "seconds": 10.867250565999996,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "data_analyst",
+      "relevant": 840,
+      "seconds": 10.285374126000022,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 0.8,
+      "hybrid_NDCG@10": 0.8603818544462509
+    },
+    {
+      "job_id": "data_engineer",
+      "relevant": 735,
+      "seconds": 10.626168747000008,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "data_scientist",
+      "relevant": 1053,
+      "seconds": 10.88316772799999,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "devops_engineer",
+      "relevant": 613,
+      "seconds": 10.873358027999984,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "frontend_developer",
+      "relevant": 603,
+      "seconds": 11.045190400000024,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "ml_engineer",
+      "relevant": 1114,
+      "seconds": 10.18162844300008,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    },
+    {
+      "job_id": "nlp_engineer",
+      "relevant": 1070,
+      "seconds": 10.329304932000014,
+      "baseline_P@10": 1.0,
+      "baseline_NDCG@10": 1.0,
+      "hybrid_P@10": 1.0,
+      "hybrid_NDCG@10": 1.0
+    }
+  ],
+  "scalability": [
+    {
+      "n": 100,
+      "seconds": 0.104,
+      "ms_per_resume": 1.043
+    },
+    {
+      "n": 500,
+      "seconds": 0.545,
+      "ms_per_resume": 1.09
+    },
+    {
+      "n": 1000,
+      "seconds": 1.034,
+      "ms_per_resume": 1.034
+    },
+    {
+      "n": 2500,
+      "seconds": 2.455,
+      "ms_per_resume": 0.982
+    },
+    {
+      "n": 5000,
+      "seconds": 4.983,
+      "ms_per_resume": 0.997
+    },
+    {
+      "n": 10000,
+      "seconds": 9.988,
+      "ms_per_resume": 0.999
+    }
+  ]
+}

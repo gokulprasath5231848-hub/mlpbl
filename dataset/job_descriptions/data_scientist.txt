@@ -1,0 +1,6 @@
+Job Title: Data Scientist
+
+We are hiring a Data Scientist to join a growing engineering team.
+The successful candidate will have strong experience with Python, ML, Statistics and pandas.
+Additional experience with Data Analytics, SQL, DL and AWS is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

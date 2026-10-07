@@ -1,0 +1,6 @@
+Job Title: Data Engineer
+
+We are hiring a Data Engineer to join a growing engineering team.
+The successful candidate will have strong experience with Python, SQL, Postgres and AWS.
+Additional experience with Docker, CI/CD and pandas is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

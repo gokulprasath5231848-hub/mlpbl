@@ -1,0 +1,41 @@
+$ python evaluate_large.py
+Dataset : dataset/resumes_10k.csv  (10000 resumes, generated)
+Labels  : dataset/ground_truth.csv + relevance.csv
+
+--- 1. Skill detection vs ground truth ---
+Decisions scored : 330,000 (resume x skill)
+Precision 0.970   Recall 1.000   F1 0.985
+TP 58,289  FP 1,799  FN 0
+Lowest-recall skills:
+  machine learning            1.000  (n=2334)
+  pytorch                     1.000  (n=2056)
+  tensorflow                  1.000  (n=1018)
+  cloud                       1.000  (n=3225)
+  pandas                      1.000  (n=2050)
+
+--- 2. Ranking quality, averaged over 8 job descriptions ---
+Metric        Baseline    Hybrid    Change
+P@10             1.000     0.975    -0.025
+P@25             0.945     0.960    +0.015
+P@50             0.873     0.935    +0.062
+P@100            0.841     0.881    +0.040
+R@10             0.013     0.012    -0.000
+R@100            0.106     0.111    +0.005
+NDCG@10          1.000     0.983    -0.017
+NDCG@100         0.867     0.901    +0.035
+MAP              0.593     0.685    +0.092
+
+--- 3. By how the resume phrases its skills (NDCG@10) ---
+Phrasing      Baseline    Hybrid    Change
+spelled out      0.769     0.955    +0.186
+abbreviated      0.992     1.000    +0.008
+mixed            0.911     0.945    +0.033
+
+--- 4. Scalability (single CPU, no GPU) ---
+  Resumes   Seconds   ms/resume
+      100      0.10       1.043
+      500      0.55       1.090
+    1,000      1.03       1.034
+    2,500      2.46       0.982
+    5,000      4.98       0.997
+   10,000      9.99       0.999

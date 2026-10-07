@@ -1,0 +1,6 @@
+Job Title: NLP Engineer
+
+We are hiring a NLP Engineer to join a growing engineering team.
+The successful candidate will have strong experience with Python, NLP, Text Classification and DL.
+Additional experience with PyTorch, ML and sklearn is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

@@ -1,0 +1,6 @@
+Job Title: DevOps Engineer
+
+We are hiring a DevOps Engineer to join a growing engineering team.
+The successful candidate will have strong experience with Docker, K8s, CI/CD and Linux.
+Additional experience with AWS, Git and Java is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

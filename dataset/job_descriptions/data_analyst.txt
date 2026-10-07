@@ -1,0 +1,6 @@
+Job Title: Data Analyst
+
+We are hiring a Data Analyst to join a growing engineering team.
+The successful candidate will have strong experience with SQL, Excel, Data Analytics and Tableau.
+Additional experience with PowerBI, Statistics and pandas is preferred.
+You will work closely with product and design, own features end to end, and contribute to technical decisions across the team.

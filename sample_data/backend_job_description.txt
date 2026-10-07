@@ -1,0 +1,11 @@
+Job Title: Backend Developer
+
+We are hiring a Backend Developer to join the platform team. The successful
+candidate will have strong experience with Java, Spring Boot, REST APIs and
+SQL, and will be comfortable working against PostgreSQL in production.
+
+Experience with Docker and Git is expected. Exposure to Kubernetes and Linux
+administration is preferred but not essential.
+
+You will own services end to end, take part in design reviews, and work
+closely with the frontend and data teams.
